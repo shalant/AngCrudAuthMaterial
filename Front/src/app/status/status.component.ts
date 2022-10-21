@@ -2,8 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-status',
-  templateUrl: './status.component.html',
-  styleUrls: ['./status.component.css']
+  template: `
+    <h4>
+      404 Error. Requested page not found
+    </h4>
+  `,
+  styles: [
+    "h4{color:red;font-size:50px}"
+  ]
 })
 export class StatusComponent implements OnInit {
 
