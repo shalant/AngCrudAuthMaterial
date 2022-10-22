@@ -11,7 +11,13 @@ export class HomeComponent implements OnInit {
 
   headername= "Angular 14 Tutorial";
   salary = 1000;
-  isdisabled = true;
+  isdisabled = false;
+  colorname="red";
+  font="40px";
+  classname='headclass';
+  stylevalue = {"color": "green", "font-size": "30px"};
+  colors = ['green', 'red', 'yellow', 'black', 'white']
+
 
   ngOnInit(): void {
   }
