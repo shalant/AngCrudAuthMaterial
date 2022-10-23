@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CustomerAPI.Models;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +9,17 @@ namespace CustomerAPI.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
+        private readonly LearnDBContext context;
+
+        public CustomerController(LearnDBContext learnDB)
+        {
+            context = learnDB;
+        }
         // GET: api/<CustomerController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<TblCustomer> Get()
         {
-            return new string[] { "value1", "value2" };
+            return context.TblCustomers.ToList();
         }
 
         // GET api/<CustomerController>/5

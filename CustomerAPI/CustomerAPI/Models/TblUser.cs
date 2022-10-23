@@ -5,8 +5,11 @@ namespace CustomerAPI.Models
 {
     public partial class TblUser
     {
+        public string? UserId { get; set; }
         public string? Name { get; set; }
+        public string? Password { get; set; }
         public string? Email { get; set; }
-        public decimal? Phone { get; set; }
+        public string? Role { get; set; }
+        public bool? IsActive { get; set; }
     }
 }

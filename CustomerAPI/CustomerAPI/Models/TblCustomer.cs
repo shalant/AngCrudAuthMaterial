@@ -5,6 +5,10 @@ namespace CustomerAPI.Models
 {
     public partial class TblCustomer
     {
-        public string? Addy { get; set; }
+        public int? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public int? Phone { get; set; }
+        public int? CreditLimit { get; set; }
     }
 }
