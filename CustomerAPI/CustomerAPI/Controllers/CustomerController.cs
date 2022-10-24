@@ -19,7 +19,7 @@ namespace CustomerAPI.Controllers
         [HttpGet]
         public IEnumerable<TblCustomer> Get()
         {
-            return context.TblCustomers.ToList();
+            return context.TblCustomer.ToList();
         }
 
         // GET api/<CustomerController>/5
